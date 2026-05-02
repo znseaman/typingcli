@@ -7,47 +7,41 @@ A new CLI generated with oclif
 [![Downloads/week](https://img.shields.io/npm/dw/typingcli.svg)](https://npmjs.org/package/typingcli)
 
 <!-- toc -->
-
-- [typingcli](#typingcli)
-- [Usage](#usage)
-- [Commands](#commands)
+* [typingcli](#typingcli)
+* [Usage](#usage)
+* [Commands](#commands)
 <!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
-
 ```sh-session
 $ npm install -g typingcli
 $ typingcli COMMAND
 running command...
 $ typingcli (--version)
-typingcli/0.0.0 darwin-arm64 node-v22.15.0
+typingcli/0.0.0 linux-x64 node-v20.20.2
 $ typingcli --help [COMMAND]
 USAGE
   $ typingcli COMMAND
 ...
 ```
-
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
-
-- [`typingcli help [COMMAND]`](#typingcli-help-command)
-- [`typingcli login EMAIL`](#typingcli-login-email)
-- [`typingcli logout`](#typingcli-logout)
-- [`typingcli plugins`](#typingcli-plugins)
-- [`typingcli plugins add PLUGIN`](#typingcli-plugins-add-plugin)
-- [`typingcli plugins:inspect PLUGIN...`](#typingcli-pluginsinspect-plugin)
-- [`typingcli plugins install PLUGIN`](#typingcli-plugins-install-plugin)
-- [`typingcli plugins link PATH`](#typingcli-plugins-link-path)
-- [`typingcli plugins remove [PLUGIN]`](#typingcli-plugins-remove-plugin)
-- [`typingcli plugins reset`](#typingcli-plugins-reset)
-- [`typingcli plugins uninstall [PLUGIN]`](#typingcli-plugins-uninstall-plugin)
-- [`typingcli plugins unlink [PLUGIN]`](#typingcli-plugins-unlink-plugin)
-- [`typingcli plugins update`](#typingcli-plugins-update)
+* [`typingcli help [COMMAND]`](#typingcli-help-command)
+* [`typingcli plugins`](#typingcli-plugins)
+* [`typingcli plugins add PLUGIN`](#typingcli-plugins-add-plugin)
+* [`typingcli plugins:inspect PLUGIN...`](#typingcli-pluginsinspect-plugin)
+* [`typingcli plugins install PLUGIN`](#typingcli-plugins-install-plugin)
+* [`typingcli plugins link PATH`](#typingcli-plugins-link-path)
+* [`typingcli plugins remove [PLUGIN]`](#typingcli-plugins-remove-plugin)
+* [`typingcli plugins reset`](#typingcli-plugins-reset)
+* [`typingcli plugins uninstall [PLUGIN]`](#typingcli-plugins-uninstall-plugin)
+* [`typingcli plugins unlink [PLUGIN]`](#typingcli-plugins-unlink-plugin)
+* [`typingcli plugins update`](#typingcli-plugins-update)
 
 ## `typingcli help [COMMAND]`
 
@@ -68,43 +62,6 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/6.2.45/src/commands/help.ts)_
-
-## `typingcli login EMAIL`
-
-log into MonkeyType by first providing email
-
-```
-USAGE
-  $ typingcli login EMAIL
-
-ARGUMENTS
-  EMAIL  email address
-
-DESCRIPTION
-  log into MonkeyType by first providing email
-
-EXAMPLES
-  $ typingcli login
-```
-
-_See code: [src/commands/login.ts](https://github.com/znseaman/typingcli/blob/v0.0.0/src/commands/login.ts)_
-
-## `typingcli logout`
-
-describe the command here
-
-```
-USAGE
-  $ typingcli logout
-
-DESCRIPTION
-  describe the command here
-
-EXAMPLES
-  $ typingcli logout
-```
-
-_See code: [src/commands/logout.ts](https://github.com/znseaman/typingcli/blob/v0.0.0/src/commands/logout.ts)_
 
 ## `typingcli plugins`
 
@@ -395,5 +352,4 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/5.4.62/src/commands/plugins/update.ts)_
-
 <!-- commandsstop -->
