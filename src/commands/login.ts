@@ -1,4 +1,4 @@
-import {Args, Command} from '@oclif/core'
+import {Args, Command, Flags} from '@oclif/core'
 import Conf from 'conf'
 import {read} from 'read'
 import terminalImage from 'terminal-image'
@@ -24,7 +24,12 @@ export default class Login extends Command {
   }
   static override description = 'log into MonkeyType by first providing email'
   static override examples = ['<%= config.bin %> <%= command.id %>']
-  static override flags = {}
+  static override flags = {
+    identityToolkitKey: Flags.string({
+      description: 'API key for Google API Identity Toolkit',
+      env: 'MONKEYTYPE_GOOGLE_APIS_IDENTITY_TOOLKIT_KEY',
+    }),
+  }
 
   public async displayProfilePicture(url?: string): Promise<void> {
     if (!url) return
@@ -50,7 +55,7 @@ export default class Login extends Command {
   }
 
   public async run(): Promise<void> {
-    const {args} = await this.parse(Login)
+    const {args, flags} = await this.parse(Login)
 
     if (config.get('email') !== args.email) {
       config.set('email', args.email)
@@ -69,7 +74,7 @@ export default class Login extends Command {
         this.error(`Invalid password, try again`)
       }
 
-      response = await login(args.email, password)
+      response = await login(args.email, password, flags.identityToolkitKey as string)
     } catch (error) {
       this.error(`Encountered an error... ${error}`)
     }

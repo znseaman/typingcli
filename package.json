@@ -12,6 +12,7 @@
     "@oclif/plugin-help": "^6",
     "@oclif/plugin-plugins": "^5",
     "conf": "^15.1.0",
+    "dotenv": "^17.4.2",
     "read": "^5.0.1",
     "terminal-image": "^4.3.0"
   },
