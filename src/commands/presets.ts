@@ -16,7 +16,7 @@ export default class Presets extends Command {
     const presets = config.get('presets') as Preset[]
     let string = `Preset Names:\n`
     for (const preset of presets) {
-      string += `* ${preset.name} - ${preset.config.difficulty} -  \n`
+      string += `* ${preset.name}\n`
     }
 
     this.log(``)
