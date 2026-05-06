@@ -5,18 +5,6 @@ import {PresetsResponse} from './commands/presets.js'
 
 // used for sign in with password
 const MONKEYTYPE_SIGN_IN_BASE_URL = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword'
-const MONKEYTYPE_GOOGLE_APIS_IDENTITY_TOOLKIT_SEARCH_PARAMS = new URLSearchParams({
-  key: 'AIzaSyB5m_AnO575kvWriahcF1SFIWp8Fj3gQno',
-})
-export const MONKEYTYPE_SIGN_IN_URL = `${
-  MONKEYTYPE_SIGN_IN_BASE_URL
-}?${MONKEYTYPE_GOOGLE_APIS_IDENTITY_TOOLKIT_SEARCH_PARAMS.toString()}`
-
-// used for getting a new access token from refresh token
-const MONKEYTYPE_SECURE_TOKEN_BASE_URL = 'https://securetoken.googleapis.com/v1/token'
-export const MONKEYTYPE_REFRESH_TOKEN_URL = `${
-  MONKEYTYPE_SECURE_TOKEN_BASE_URL
-}?${MONKEYTYPE_GOOGLE_APIS_IDENTITY_TOOLKIT_SEARCH_PARAMS.toString()}`
 
 const MONKEYTYPE_API_BASE_URL = 'https://api.monkeytype.com'
 
@@ -51,7 +39,7 @@ export async function login(email: string, password: string, identityToolkitKey:
 
   // eslint-disable-next-line n/no-unsupported-features/node-builtins
   return fetch(
-    `${MONKEYTYPE_SIGN_IN_URL}?${MONKEYTYPE_GOOGLE_APIS_IDENTITY_TOOLKIT_SEARCH_PARAMS.toString()}`,
+    `${MONKEYTYPE_SIGN_IN_BASE_URL}?${MONKEYTYPE_GOOGLE_APIS_IDENTITY_TOOLKIT_SEARCH_PARAMS.toString()}`,
     requestOptions,
   ).then((response) => response.json())
 }
